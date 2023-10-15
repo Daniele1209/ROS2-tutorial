@@ -1,9 +1,15 @@
 # Efr-ROS2-autonomous-driving
-This is a task repository for the Elbflorace Formula Student team - autonomous driving division.
-The following are the required steps in order to set up [ROS2](https://docs.ros.org/en/iron/index.html) along with turtlesim and rqt.
 
-### Contents
+This is a task repository for the Elbflorace Formula Student team - autonomous driving division.
+The following are the required steps in order to set up ROS2 along with turtlesim and rqt.
+<br>
+<br>
+*Latest ROS version currently (2023): [Iron](https://docs.ros.org/en/iron/index.html)*
+
+
+## Contents
 - [Setup](#setup)
+- [Run](#run)
 - [Introduction Task](#introduction)
 
 ## Setup
@@ -47,3 +53,22 @@ sudo apt install ros-iron-desktop
 # Possible values are: setup.bash, setup.sh, setup.zsh depending on your install
 source /opt/ros/iron/setup.bash
 ```
+### turtlesim
+[Link](https://docs.ros.org/en/iron/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) to the official documentation
+```
+sudo apt install ros-iron-turtlesim
+```
+- Test start
+```
+ros2 run turtlesim turtlesim_node
+```
+### rqt
+[Link](https://docs.ros.org/en/iron/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) to the official documentation
+```
+sudo apt install ~nros-iron-rqt*
+```
+- Test run
+```
+rqt
+```
+## Run
