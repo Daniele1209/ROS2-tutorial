@@ -53,6 +53,7 @@ sudo apt install ros-iron-desktop
 # Possible values are: setup.bash, setup.sh, setup.zsh depending on your install
 source /opt/ros/iron/setup.bash
 ```
+Source the ROS installation using the [link](https://docs.ros.org/en/iron/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html). So that the `source` command is not required each time we need access to ROS2. 
 ### turtlesim
 [Link](https://docs.ros.org/en/iron/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) to the official documentation
 ```
