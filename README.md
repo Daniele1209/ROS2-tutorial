@@ -1,9 +1,10 @@
 # Efr-ROS2-autonomous-driving
 
 This is a task repository for the Elbflorace Formula Student team - autonomous driving division.
-The following are the required steps in order to set up ROS2 along with turtlesim and rqt.
-<br>
-<br>
+The following are the required steps in order to set up ROS2 along with turtlesim and rqt. 
+
+If you do **not** want to set up for **development** skip to the [Run](#run) section.
+
 *Latest ROS version currently (2023): [Iron](https://docs.ros.org/en/iron/index.html)*
 
 
@@ -56,20 +57,62 @@ source /opt/ros/iron/setup.bash
 Source the ROS installation using the [link](https://docs.ros.org/en/iron/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html). So that the `source` command is not required each time we need access to ROS2. 
 ### turtlesim
 [Link](https://docs.ros.org/en/iron/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) to the official documentation
-```
-sudo apt install ros-iron-turtlesim
-```
+    ```
+    sudo apt install ros-iron-turtlesim
+    ```
 - Test start
-```
-ros2 run turtlesim turtlesim_node
-```
+    ```
+    ros2 run turtlesim turtlesim_node
+    ```
 ### rqt
 [Link](https://docs.ros.org/en/iron/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) to the official documentation
-```
-sudo apt install ~nros-iron-rqt*
-```
+    ```
+    sudo apt install ~nros-iron-rqt*
+    ```
 - Test run
-```
-rqt
-```
+    ```
+    rqt
+    ```
 ## Run
+### Installation
+ Install required tools: *ROS2, colcon, Xterm*
+ - [ROS2](https://docs.ros.org/en/iron/index.html) 
+    Install steps [above](#ros2)
+ - [colcon](https://colcon.readthedocs.io/en/released/) - command line tool used for building
+    ```
+    sudo apt install python3-colcon-common-extensions
+    ```
+ - Xterm - a terminal emulator for the X Window System
+    ```
+    sudo apt-get install xterm 
+    ```
+### App Running
+- Go from root directory to your src dir from ros2 (ros2 workspace)
+    ```
+    cd ros2_ws/src
+    ```
+- Clone the Github project containing the package
+    ```
+    git clone https://github.com/Daniele1209/Efr-ROS2-autonomous-driving.git
+    ```
+- Go back to workspace directory 
+    ```
+    cd ~/ros2_ws
+    ```
+- **Build** the cloned package using *colcon*  
+    ```
+    colcon build
+    ```
+- Source the setup file
+    ```
+    source install/local_setup.bash
+    ```
+- **Run** the package
+    ```
+    ros2 launch turtlesim_border_color turtle_border_color.launch.py
+    ```
+
+<br>
+
+Finally, if you installed [rqt](#rqt) from previous steps, running `rqt_graph` in a new terminal should output the following nodes: 
+![alt text](./images/rosgraph.png)
