@@ -1,6 +1,6 @@
-# Efr-ROS2-autonomous-driving
+# Efr-ROS2-autonomous-systems
 
-This is a task repository for the Elbflorace Formula Student team - autonomous driving division.
+This is a task repository for the Elbflorace Formula Student team - autonomous systems division.
 The following are the required steps in order to set up ROS2 along with turtlesim and rqt. 
 
 If you do **not** want to set up for **development** skip to the [Run](#run) section.
